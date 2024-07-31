@@ -5,7 +5,6 @@ import { calculateAge, calculateBirthday, calculateGender } from './utility/nicU
 
 
 const ValidNicData = ({validNicData}) => {
-  console.log(validNicData)
 
   const handleDownload = async (format) => {
     try {

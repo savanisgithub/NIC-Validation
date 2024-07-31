@@ -107,7 +107,7 @@ router.post('/saveValidNicData', async (req, res) => {
         const formattedBirthday = new Date(birthday).toISOString().split('T')[0];
 
         return `INSERT INTO valid_nic_data (NIC, gender, birthday, age) 
-                VALUES ('${NIC}', '${gender}', '${birthday}', ${age})`;
+                VALUES ('${NIC}', '${gender}', '${formattedBirthday}', ${age})`;
       });
   
       for (const query of insertQueries) {

@@ -23,7 +23,9 @@ const FileUpload = () => {
     })
     .then(response => {
       alert('Files uploaded successfully.');
+      window.location.reload();
     })
+    
     .catch(error => {
       console.error('There was an error uploading the files!', error);
     });

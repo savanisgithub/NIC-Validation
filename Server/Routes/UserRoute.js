@@ -54,12 +54,12 @@ router.post('/resetpassword', (req, res) => {
 router.get('/search', (req, res) => {
     const { query } = req.query;
 
-    let sql = 'SELECT  * FROM valid_nic_data WHERE 1=1';
+    let sql = 'SELECT * FROM valid_nic_data WHERE 1=1';
     const params = [];
 
     if (query) {
-        sql += ' AND (gender = ? OR NIC = ? OR NIC LIKE ?)';
-        params.push(query, query, `%${query}%`);
+        sql += ' AND (gender = ? OR NIC LIKE ?)';
+        params.push(query, `%${query}%`);
     }
 
     con.query(sql, params, (err, results) => {

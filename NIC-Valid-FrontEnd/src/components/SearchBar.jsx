@@ -26,7 +26,7 @@ const SearchBar = ({setValidNicData}) => {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search by.. Gender/NIC_number"
+        placeholder="Search by Gender..."
         style={{ padding: "10px", width: "300px", marginRight: "10px", border: '1px solid black'}}
       />
       <button onClick={handleSearch} className="btn btn-primary">
